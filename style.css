@@ -1,0 +1,53 @@
+#grid_box {
+    display: grid;
+    grid-template-columns: repeat(9, 70px);
+    grid-template-rows: repeat(9, 70px);
+    border: 8px solid black;
+    width: 630px;
+}
+
+.grid_item {
+    border: 2px solid black;
+    text-align: center;
+    padding: 20px;
+    padding-top: 25px;
+    font-family: 'Helvetica', sans-serif;
+}
+
+.grid_item.highlighted {
+    box-shadow: 0 0 5px 5px deepskyblue inset;
+}
+
+.grid_item:nth-child(28), .grid_item:nth-child(29), .grid_item:nth-child(30),
+.grid_item:nth-child(31), .grid_item:nth-child(32), .grid_item:nth-child(33), .grid_item:nth-child(34),
+.grid_item:nth-child(35), .grid_item:nth-child(36), .grid_item:nth-child(55), .grid_item:nth-child(56),
+.grid_item:nth-child(57), .grid_item:nth-child(58), .grid_item:nth-child(59), .grid_item:nth-child(60),
+.grid_item:nth-child(61), .grid_item:nth-child(62), .grid_item:nth-child(63) {
+    border-top: 2px solid red;
+}
+
+.grid_item:nth-child(19), .grid_item:nth-child(20), .grid_item:nth-child(21), .grid_item:nth-child(22),
+.grid_item:nth-child(23), .grid_item:nth-child(24), .grid_item:nth-child(25), .grid_item:nth-child(26),
+.grid_item:nth-child(27), .grid_item:nth-child(46), .grid_item:nth-child(47), .grid_item:nth-child(48),
+.grid_item:nth-child(49), .grid_item:nth-child(50), .grid_item:nth-child(51), .grid_item:nth-child(52),
+.grid_item:nth-child(53), .grid_item:nth-child(54){
+    border-bottom: 2px solid red;
+}
+
+.grid_item:nth-child(3), .grid_item:nth-child(12), .grid_item:nth-child(21),
+.grid_item:nth-child(6), .grid_item:nth-child(15), .grid_item:nth-child(24),
+.grid_item:nth-child(30), .grid_item:nth-child(39), .grid_item:nth-child(48),
+.grid_item:nth-child(57), .grid_item:nth-child(66), .grid_item:nth-child(75),
+.grid_item:nth-child(33), .grid_item:nth-child(42), .grid_item:nth-child(51),
+.grid_item:nth-child(60), .grid_item:nth-child(69), .grid_item:nth-child(78) {
+    border-right: 2px solid red;
+}
+
+.grid_item:nth-child(4), .grid_item:nth-child(13), .grid_item:nth-child(22),
+.grid_item:nth-child(7), .grid_item:nth-child(16), .grid_item:nth-child(25), .grid_item:nth-child(31), 
+.grid_item:nth-child(40), .grid_item:nth-child(49),
+.grid_item:nth-child(58), .grid_item:nth-child(67), .grid_item:nth-child(76),
+.grid_item:nth-child(34), .grid_item:nth-child(43), .grid_item:nth-child(52),
+.grid_item:nth-child(61), .grid_item:nth-child(70), .grid_item:nth-child(79) {
+    border-left: 2px solid red;
+}
