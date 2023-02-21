@@ -1,94 +1,117 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Sudoku Game and Solving Program">
+        <meta name="keywords" content="Sudoku,Game,Algorithm,Solve">
+        <meta name="author" content="Matt Conforti">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>sudoku solver</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
-        <div id="grid_box">
-            <div class="grid_item">1</div>
-            <div class="grid_item">2</div>
-            <div class="grid_item">3</div>
-            <div class="grid_item">4</div>
-            <div class="grid_item">5</div>
-            <div class="grid_item">6</div>
-            <div class="grid_item">7</div>
-            <div class="grid_item">8</div>
-            <div class="grid_item">9</div>
-            <div class="grid_item">10</div>
-            <div class="grid_item">11</div>
-            <div class="grid_item">12</div>
-            <div class="grid_item">13</div>
-            <div class="grid_item">14</div>
-            <div class="grid_item">15</div>
-            <div class="grid_item">16</div>
-            <div class="grid_item">17</div>
-            <div class="grid_item">18</div>
-            <div class="grid_item">19</div>
-            <div class="grid_item">20</div>
-            <div class="grid_item">21</div>
-            <div class="grid_item">22</div>
-            <div class="grid_item">23</div>
-            <div class="grid_item">24</div>
-            <div class="grid_item">25</div>
-            <div class="grid_item">26</div>
-            <div class="grid_item">27</div>
-            <div class="grid_item">28</div>
-            <div class="grid_item">29</div>
-            <div class="grid_item">30</div>
-            <div class="grid_item">31</div>
-            <div class="grid_item">32</div>
-            <div class="grid_item">33</div>
-            <div class="grid_item">34</div>
-            <div class="grid_item">35</div>
-            <div class="grid_item">36</div>
-            <div class="grid_item">37</div>
-            <div class="grid_item">38</div>
-            <div class="grid_item">39</div>
-            <div class="grid_item">40</div>
-            <div class="grid_item">41</div>
-            <div class="grid_item">42</div>
-            <div class="grid_item">43</div>
-            <div class="grid_item">44</div>
-            <div class="grid_item">45</div>
-            <div class="grid_item">46</div>
-            <div class="grid_item">47</div>
-            <div class="grid_item">48</div>
-            <div class="grid_item">49</div>
-            <div class="grid_item">50</div>
-            <div class="grid_item">51</div>
-            <div class="grid_item">52</div>
-            <div class="grid_item">53</div>
-            <div class="grid_item">54</div>
-            <div class="grid_item">55</div>
-            <div class="grid_item">56</div>
-            <div class="grid_item">57</div>
-            <div class="grid_item">58</div>
-            <div class="grid_item">59</div>
-            <div class="grid_item">60</div>
-            <div class="grid_item">61</div>
-            <div class="grid_item">62</div>
-            <div class="grid_item">63</div>
-            <div class="grid_item">64</div>
-            <div class="grid_item">65</div>
-            <div class="grid_item">66</div>
-            <div class="grid_item">67</div>
-            <div class="grid_item">68</div>
-            <div class="grid_item">69</div>
-            <div class="grid_item">70</div>
-            <div class="grid_item">71</div>
-            <div class="grid_item">72</div>
-            <div class="grid_item">73</div>
-            <div class="grid_item">74</div>
-            <div class="grid_item">75</div>
-            <div class="grid_item">76</div>
-            <div class="grid_item">77</div>
-            <div class="grid_item">78</div>
-            <div class="grid_item">79</div>
-            <div class="grid_item">80</div>
-            <div class="grid_item">81</div>
+        <div id="outer_grid_container">
+            <div class="outer_grid_item"> <!-- this grid item is also an inner grid container itself -->
+                <div class="inner_grid_item">A1</div>
+                <div class="inner_grid_item">A2</div>
+                <div class="inner_grid_item">A3</div>
+                <div class="inner_grid_item">B1</div>
+                <div class="inner_grid_item">B2</div>
+                <div class="inner_grid_item">B3</div>
+                <div class="inner_grid_item">C1</div>
+                <div class="inner_grid_item">C2</div>
+                <div class="inner_grid_item">C3</div>
+            </div>
+            <div class="outer_grid_item">
+                <div class="inner_grid_item">A4</div>
+                <div class="inner_grid_item">A5</div>
+                <div class="inner_grid_item">A6</div>
+                <div class="inner_grid_item">B4</div>
+                <div class="inner_grid_item">B5</div>
+                <div class="inner_grid_item">B6</div>
+                <div class="inner_grid_item">C4</div>
+                <div class="inner_grid_item">C5</div>
+                <div class="inner_grid_item">C6</div>
+            </div>
+            <div class="outer_grid_item">
+                <div class="inner_grid_item">A7</div>
+                <div class="inner_grid_item">A8</div>
+                <div class="inner_grid_item">A9</div>
+                <div class="inner_grid_item">B7</div>
+                <div class="inner_grid_item">B8</div>
+                <div class="inner_grid_item">B9</div>
+                <div class="inner_grid_item">C7</div>
+                <div class="inner_grid_item">C8</div>
+                <div class="inner_grid_item">C9</div>
+            </div>
+            <div class="outer_grid_item">
+                <div class="inner_grid_item">D1</div>
+                <div class="inner_grid_item">D2</div>
+                <div class="inner_grid_item">D3</div>
+                <div class="inner_grid_item">E1</div>
+                <div class="inner_grid_item">E2</div>
+                <div class="inner_grid_item">E3</div>
+                <div class="inner_grid_item">F1</div>
+                <div class="inner_grid_item">F2</div>
+                <div class="inner_grid_item">F3</div>
+            </div>
+            <div class="outer_grid_item">
+                <div class="inner_grid_item">D4</div>
+                <div class="inner_grid_item">D5</div>
+                <div class="inner_grid_item">D6</div>
+                <div class="inner_grid_item">E4</div>
+                <div class="inner_grid_item">E5</div>
+                <div class="inner_grid_item">E6</div>
+                <div class="inner_grid_item">F4</div>
+                <div class="inner_grid_item">F5</div>
+                <div class="inner_grid_item">F6</div>
+            </div>
+            <div class="outer_grid_item">
+                <div class="inner_grid_item">D7</div>
+                <div class="inner_grid_item">D8</div>
+                <div class="inner_grid_item">D9</div>
+                <div class="inner_grid_item">E7</div>
+                <div class="inner_grid_item">E8</div>
+                <div class="inner_grid_item">E9</div>
+                <div class="inner_grid_item">F7</div>
+                <div class="inner_grid_item">F8</div>
+                <div class="inner_grid_item">F9</div>
+            </div>
+            <div class="outer_grid_item">
+                <div class="inner_grid_item">G1</div>
+                <div class="inner_grid_item">G2</div>
+                <div class="inner_grid_item">G3</div>
+                <div class="inner_grid_item">H1</div>
+                <div class="inner_grid_item">H2</div>
+                <div class="inner_grid_item">H3</div>
+                <div class="inner_grid_item">I1</div>
+                <div class="inner_grid_item">I2</div>
+                <div class="inner_grid_item">I3</div>
+            </div>
+            <div class="outer_grid_item">
+                <div class="inner_grid_item">G4</div>
+                <div class="inner_grid_item">G5</div>
+                <div class="inner_grid_item">G6</div>
+                <div class="inner_grid_item">H4</div>
+                <div class="inner_grid_item">H5</div>
+                <div class="inner_grid_item">H6</div>
+                <div class="inner_grid_item">I4</div>
+                <div class="inner_grid_item">I5</div>
+                <div class="inner_grid_item">I6</div>
+            </div>
+            <div class="outer_grid_item">
+                <div class="inner_grid_item">G7</div>
+                <div class="inner_grid_item">G8</div>
+                <div class="inner_grid_item">G9</div>
+                <div class="inner_grid_item">H7</div>
+                <div class="inner_grid_item">H8</div>
+                <div class="inner_grid_item">H9</div>
+                <div class="inner_grid_item">I7</div>
+                <div class="inner_grid_item">I8</div>
+                <div class="inner_grid_item">I9</div>
+            </div>
         </div>
-        <button id="clear">Clear Board</button>
+        <button id="clear_button">Clear Board</button>
         <script src="script.js"></script>
     </body>
 </html>
