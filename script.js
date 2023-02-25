@@ -35,10 +35,50 @@ function loadGivens(solutionArray) {
 }
 
 function clearDigits() {
+    // clear all numbers inside cells (leave given numbers? 
+    // what about clearing last move & undo button type thing
+    // that goes back x moves, potentially back to start) want this program
+    // to have some type of memory & recall of moves etc
     for (let digit of digits) {
         digit.textContent = ' ';
     }
 }
+
+function testRules() {
+    // test if the rules of sudoku apply correctly (test the solution or a subset)
+}
+
+function getCells() {
+    // get all the numbers inside cells to parse
+}
+
+
+
+/*
+// ********* CODE FROM OTHER VERSION OF FILE ON DESKTOP MAC *************
+function preLoadSolution() {
+    let givens = [];
+    generateStart(givens); // put the givens onto the board to start the game
+
+    // loads in a solution into the cells. default values & the code knows the 
+    // full solution & potentially how to get there. can be red or green around
+    // the cells after user input & input is checked against steps in the solution
+    // and or the overall solution itself
+}
+
+// note need calculator like 1-9 click button display so you can input easier
+// & also have this game played mostly with mouse makes it easier to not
+// have to use keyboard too. have keyboard on the screen like a mobile game or
+// the sudoku apps i have etc
+
+// called inside preLoadSolution to put default (starting numbers) onto the grid
+function generateStart(givensInSolution) {
+    // actually put the givens onto the board
+}
+
+// ********************************************************************
+*/
+
 
 // ----------------------------------------------------------------------
 

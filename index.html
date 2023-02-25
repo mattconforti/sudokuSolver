@@ -111,7 +111,35 @@
                 <div class="inner_grid_item">I9</div>
             </div>
         </div>
-        <button id="clear_button">Clear Board</button>
+        <!-- make this difficulty selector its own mini screen or greyed out
+             once the game starts. you dont want them to even think they have
+             the ability to switch difficulty mid game. should be on a start
+             screen of sorts. or grey out & have ability to quit & end game &
+             then you can select difficulty again.
+        -->
+        <div id="difficulty_div">
+            <h2>Select Difficulty:</h2>
+            <!-- easy checkbox -->
+            <input type="checkbox" id="easy_chk" name="easy_chk" value="easy">
+            <label for="easy_chk">Easy</label><br>
+            <!-- medium checkbox -->
+            <input type="checkbox" id="med_chk" name="med_chk" value="medium">
+            <label for="med_chk">Medium</label><br>
+            <!-- hard checkbox -->
+            <input type="checkbox" id="hard_chk" name="hard_chk" value="hard">
+            <label for="hard_chk">Hard</label><br>
+        </div>
+        <!-- buttons -->
+        <div id="button_div">
+            <button>Start Game</button>
+            <button id="clear" title="Clear all grid cells completely">Clear Board</button>
+            <button id="candidates">Show Candidates</button>
+            <button>Timer on/off</button>
+            <button>Quit</button>
+            <!-- make this a toggle switch 
+            https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_switch
+            -->
+        </div>
         <script type="text/javascript" src="script.js"></script>
     </body>
 </html>
