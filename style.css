@@ -15,8 +15,15 @@
 
 .inner_grid_item {
     border: 1px solid black;
+    text-align: center;
+    padding-top: 38%;
 }
 
 .inner_grid_item.highlighted {
     box-shadow: 0 0 5px 5px deepskyblue inset;
+}
+
+.digit_in {
+    width: 50%;
+    border: none;
 }
